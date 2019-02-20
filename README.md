@@ -2,11 +2,26 @@
 
 [![npm](https://img.shields.io/npm/v/lab-verbose-console-reporter.svg)](https://www.npmjs.com/package/lab-verbose-console-reporter)
 [![Build status](https://img.shields.io/travis/antipin/lab-verbose-console-reporter/master.svg)](https://travis-ci.org/antipin/lab-verbose-console-reporter)
-[![David](https://img.shields.io/david/antipin/lab-verbose-console-reporter.svg)](https://david-dm.org/antipin/lab-verbose-console-reporter)
-[![David](https://img.shields.io/david/dev/antipin/lab-verbose-console-reporter.svg)](https://david-dm.org/antipin/lab-verbose-console-reporter/#info=devDependencies&view=table)
 
 [lab](https://github.com/hapijs/lab) are [hapi](https://github.com/hapijs/hapi) together.
 
+A pretty mocha-style console output
+
+```
+src/scorers/jobTitleScorer
+  ::createScoringFunction
+    when project is not provided
+      throws
+    given a valid project
+      and no person
+        returns the maximum negative score
+      and a person without an overlapping title
+        returns no score
+      and a person with an overlapping job title
+        returns the maximum positive score
+      and a person with an overlapping keyword without an overlapping title
+        returns a positive score
+```
 
 ## Install
 
