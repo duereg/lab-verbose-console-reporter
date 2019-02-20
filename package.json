@@ -1,0 +1,53 @@
+{
+  "name": "lab-verbose-console-reporter",
+  "version": "0.0.1",
+  "description": "lab verbose console reporter",
+  "main": "src/verboseConsoleReporter.js",
+  "homepage": "https://github.com/duereg/lab-verbose-console-reporter",
+  "author": "Matt Blair (https://github.com/duereg)",
+  "scripts": {
+    "test": "npm run lint && npm run unit-test",
+    "unit-test": "lab ./test",
+    "lint": "eslint ./ --fix",
+    "postinstall": "npm run symlink && check-engine ./package.json",
+    "symlink": "cd node_modules && ln -nsf ../src && ln -nsf ../test && cd ..",
+    "nosymlink": "rm node_modules/{src,data,test,config}"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "bugs": {
+    "url": "https://github.com/duereg/lab-verbose-console-reporter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duereg/lab-verbose-console-reporter.git"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=6"
+  },
+  "keywords": [
+    "lab",
+    "console",
+    "verbose",
+    "reporter"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "check-engine": "^1.7.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "lab": "^18.0.2"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
