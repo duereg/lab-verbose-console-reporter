@@ -8,10 +8,7 @@
   "scripts": {
     "test": "npm run lint && npm run unit-test",
     "unit-test": "lab ./test",
-    "lint": "eslint ./ --fix",
-    "postinstall": "npm run symlink && check-engine ./package.json",
-    "symlink": "cd node_modules && ln -nsf ../src && ln -nsf ../test && cd ..",
-    "nosymlink": "rm node_modules/{src,data,test,config}"
+    "lint": "eslint ./ --fix"
   },
   "pre-commit": [
     "test"

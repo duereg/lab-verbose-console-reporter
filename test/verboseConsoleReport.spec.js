@@ -1,9 +1,18 @@
-const { expect, before, describe, it } = exports.lab = require('test/testHelper');
-const VerboseConsoleReporter = require('src/verboseConsoleReporter');
+const { expect, before, describe, it } = exports.lab = require('./testHelper');
+const VerboseConsoleReporter = require('../src/verboseConsoleReporter');
 
 function basicTestRun() {
   before(({ context }) => {
     context.verboseConsoleReporter.test({});
+  });
+  it('works', ({ context }) => {
+    expect(context.verboseConsoleReporter).to.be.ok;
+  });
+}
+
+function complexTestRun() {
+  before(({ context }) => {
+    context.verboseConsoleReporter.test({ path: ['a', 'b'] });
   });
   it('works', ({ context }) => {
     expect(context.verboseConsoleReporter).to.be.ok;
@@ -31,6 +40,7 @@ describe('src/verboseConsoleReporter', () => {
     });
 
     describe('running a basic test', basicTestRun);
+    describe('running a complex test', complexTestRun);
   });
 
   describe('instantiate with progress = 1', () => {
@@ -43,6 +53,7 @@ describe('src/verboseConsoleReporter', () => {
     });
 
     describe('running a basic test', basicTestRun);
+    describe('running a complex test', complexTestRun);
   });
 
   describe('instantiate with "silent-skips": true', () => {
@@ -55,5 +66,6 @@ describe('src/verboseConsoleReporter', () => {
     });
 
     describe('running a basic test', basicTestRun);
+    describe('running a complex test', complexTestRun);
   });
 });
