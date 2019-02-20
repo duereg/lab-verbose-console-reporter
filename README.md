@@ -1,7 +1,7 @@
 # Lab Verbose Console reporter
 
 [![npm](https://img.shields.io/npm/v/lab-verbose-console-reporter.svg)](https://www.npmjs.com/package/lab-verbose-console-reporter)
-[![Build status](https://img.shields.io/travis/antipin/lab-verbose-console-reporter/master.svg)](https://travis-ci.org/antipin/lab-verbose-console-reporter)
+[![Build status](https://img.shields.io/travis/duereg/lab-verbose-console-reporter/master.svg)](https://travis-ci.org/duereg/lab-verbose-console-reporter)
 
 [lab](https://github.com/hapijs/lab) are [hapi](https://github.com/hapijs/hapi) together.
 
