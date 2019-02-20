@@ -1,6 +1,6 @@
 {
   "name": "lab-verbose-console-reporter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "lab verbose console reporter",
   "main": "src/verboseConsoleReporter.js",
   "homepage": "https://github.com/duereg/lab-verbose-console-reporter",
