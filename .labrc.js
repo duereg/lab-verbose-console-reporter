@@ -8,5 +8,5 @@ module.exports = {
     "coverage/data.json",
   ],
   pattern: "spec",
-  globals: "globalThis"
+  globals: "globalThis,FinalizationRegistry,WeakRef",
 };
